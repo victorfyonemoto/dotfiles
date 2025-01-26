@@ -1,0 +1,5 @@
+# Show line numbers
+set linenumbers
+
+# Tabs
+set tabsize 2
