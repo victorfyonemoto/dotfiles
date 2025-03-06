@@ -114,6 +114,7 @@ alias fd='fdfind'
 
 # Shell integrations
 #eval "$(fzf --zsh)"
+#source <(fzf --zsh)
 eval "$(zoxide init zsh)"
 
 # -- Use fd instead of fzf --
