@@ -77,8 +77,13 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
+(setq doom-font (font-spec :family "JetBrainsMono Nerd Font" :size 16)
+      doom-variable-pitch-font (font-spec :family "Ubuntu" :size 16)
+      doom-big-font (font-spec :family "JetBrainsMono Nerd Font" :size 20)
+      doom-symbol-font (font-spec :family "Symbols Nerd Font":size 16))
+
 (use-package! org-auto-tangle
   :defer t
-  :hook (org-mode . org-auto-tangle)
+  :hook (org-mode . org-auto-tangle-mode)
   :config
   (setq org-auto-tangle-default t))
