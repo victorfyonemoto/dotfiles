@@ -111,7 +111,7 @@ alias sysupdg='sudo nala update && sudo nala upgrade'
 
 # change your default USER shell
 alias tobash="sudo chsh $USER -s /bin/bash && echo 'Log out and log back in for change to take effect.'"
-#alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Log out and log back in for change to take effect.'"
+alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Log out and log back in for change to take effect.'"
 alias tofish="sudo chsh $USER -s /bin/fish && echo 'Log out and log back in for change to take effect.'"
 
 # navigation
@@ -173,9 +173,18 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# pnpm
+export PNPM_HOME="/home/victor/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
 
 # Enable fzf
 # Set up fzf key bindings and fuzzy completion
@@ -186,6 +195,3 @@ export NVM_DIR="$HOME/.nvm"
 
 # Custom bash prompt
 source ~/.bash_prompt
-
-PATH=~/.console-ninja/.bin:$PATH
-
