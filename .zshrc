@@ -83,6 +83,11 @@ alias sysupg='sudo nala upgrade'
 alias sysupdg='sudo nala update && sudo nala upgrade'
 alias c='clear'
 
+# change your default USER shell
+alias tobash="sudo chsh $USER -s /bin/bash && echo 'Log out and log back in for change to take effect.'"
+alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Log out and log back in for change to take effect.'"
+alias tofish="sudo chsh $USER -s /bin/fish && echo 'Log out and log back in for change to take effect.'"
+
 # navigation
 alias ..='cd ..'
 alias .2='cd ../..'
@@ -136,3 +141,16 @@ _fzf_compgen_dir() {
 }
 
 source ~/fzf-git.sh/fzf-git.sh
+
+# NVM
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# pnpm
+export PNPM_HOME="/home/victor/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
