@@ -52,3 +52,4 @@
 (package! evil-tutor)
 (package! tldr)
 (package! org-auto-tangle)
+(package! catppuccin-theme)

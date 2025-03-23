@@ -23,7 +23,12 @@
 ;;
 ;;(setq doom-font (font-spec :family "Fira Code" :size 12 :weight 'semi-light)
 ;;      doom-variable-pitch-font (font-spec :family "Fira Sans" :size 13))
-;;
+
+(setq doom-font (font-spec :family "JetBrainsMono Nerd Font" :size 16)
+      doom-variable-pitch-font (font-spec :family "Ubuntu" :size 16)
+      doom-big-font (font-spec :family "JetBrainsMono Nerd Font" :size 20)
+      doom-symbol-font (font-spec :family "Symbols Nerd Font":size 16))
+      
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
 ;; refresh your font settings. If Emacs still can't find your font, it likely
@@ -32,7 +37,15 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
+
 (setq doom-theme 'doom-one)
+;;(setq doom-theme 'doom-dracula)
+;;(setq doom-theme 'catppuccin)
+;;(setq doom-theme 'doom-palenight)
+;;(setq doom-theme 'doom-material)
+;;(setq doom-theme 'doom-nord)
+;;(setq doom-theme 'doom-tokyo-night)
+;;(setq doom-theme 'doom-solarized-dark)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -76,11 +89,6 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
-
-(setq doom-font (font-spec :family "JetBrainsMono Nerd Font" :size 16)
-      doom-variable-pitch-font (font-spec :family "Ubuntu" :size 16)
-      doom-big-font (font-spec :family "JetBrainsMono Nerd Font" :size 20)
-      doom-symbol-font (font-spec :family "Symbols Nerd Font":size 16))
 
 (use-package! org-auto-tangle
   :defer t
