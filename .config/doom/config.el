@@ -28,7 +28,7 @@
       doom-variable-pitch-font (font-spec :family "Ubuntu" :size 16)
       doom-big-font (font-spec :family "JetBrainsMono Nerd Font" :size 20)
       doom-symbol-font (font-spec :family "Symbols Nerd Font":size 16))
-      
+
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
 ;; refresh your font settings. If Emacs still can't find your font, it likely
@@ -38,9 +38,11 @@
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 
-(setq doom-theme 'doom-one)
+;;(setq doom-theme 'doom-one)
 ;;(setq doom-theme 'doom-dracula)
-;;(setq doom-theme 'catppuccin)
+(setq doom-theme 'catppuccin)
+(setq catppuccin-flavor 'macchiato) ;; 'latte, 'macchiato, 'mocha
+(catppuccin-reload)
 ;;(setq doom-theme 'doom-palenight)
 ;;(setq doom-theme 'doom-material)
 ;;(setq doom-theme 'doom-nord)
@@ -89,6 +91,8 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+
+(beacon-mode 1)
 
 (use-package! org-auto-tangle
   :defer t

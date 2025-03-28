@@ -51,5 +51,6 @@
 
 (package! evil-tutor)
 (package! tldr)
+(package! beacon)
 (package! org-auto-tangle)
 (package! catppuccin-theme)
